@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Web App</title>
+    <link rel="stylesheet" href="mystyles.css">
+</head>
+
+<body>
+
+    <%- include('header') %>
+
+
+        <main>
+            <div class="grid-row">
+                <% mydata.forEach((toy)=> { %>
+                    <div class="grid-item">
+                        <div class="item-title">
+                            <%= toy.title.slice(0,30) %>
+                        </div>
+                        <a href="<%= toy.url %>" class="buy-button">BUY</a>
+                    </div>
+                    <% }) %>
+            </div>
+        </main>
+
+        <%- include('footer') %>
+
+
+</body>
+
+</html>
